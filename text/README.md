@@ -130,6 +130,7 @@ patternUnits 填充方式
                   
 ##<animate>
 基本上可对任何属性实现动画
+    
     <svg viewBox="0 0 800 100">
         <line stroke="goldenrod" stroke-width="10"
           x1="0" y1="50" x2="0" y2="50">
@@ -138,3 +139,33 @@ patternUnits 填充方式
           dur="2s" repeatCount="indefinite"/>
         </line>
     </svg>
+    
+* 动画变形需要确保锚点的数量相同
+* fill="freeze" 动画停在最后的状态
+* begin="indefinite" & JS: TAG.beginElement();触发动画执行
+
+
+##stroke-dasharray&stroke-dashoffset
+stroke-dasharray
+    可控制用来描边的点划线的图案范式。
+    它是一个<length>和<percentage>数列，数与数之间用逗号或者空白隔开，指定短划线和缺口的长度。
+stroke-dashoffset
+    
+  <svg viewBox="0 0 200 80" stroke-width="1">
+    <text stroke-dasharray="700 700" stroke-dashoffset="700" fill="none" stroke="#fff" dy="1em" font-size="70">
+      cool
+      <animate dur="2s" repeatCount="indefinite"
+        attributeName="stroke-dashoffset"
+        values="700;0" />
+    <text>
+  </svg>
+  
+stroke-dashoffset
+    偏移量
+    
+[Dynamic Image Color](http://codepen.io/noahblon/pen/ZbjmbK)
+[SaraSoueidan](https://twitter.com/SaraSoueidan)
+[CODROPS](http://tympanus.net/codrops/category/tutorials/)
+[SVG WEEKLY](http://us11.campaign-archive2.com/)        
+[SVG MDN](https://developer.mozilla.org/en-US/docs/Web/SVG)
+
